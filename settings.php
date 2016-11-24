@@ -38,3 +38,8 @@ function check_length($value = "", $min, $max) {
     $result_check_length = (mb_strlen($value) < $min || mb_strlen($value) > $max); //$value это строка, которую нужно проверить, второй параметр $min минимально допустимая длинна строки, третий параметр $max - максимально допустимая длинна.
     return !$result_check_length;
 }
+
+
+
+
+

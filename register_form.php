@@ -8,9 +8,6 @@
 require_once 'settings.php';
 
 
-
-
-
 if(isset($_POST['register_name']) && isset($_POST['register_password'])){
     $register_name = clean($_POST['register_name']);
     $register_password = clean($_POST['register_password']);
@@ -33,15 +30,11 @@ if(isset($_POST['register_name']) && isset($_POST['register_password'])){
         else {
             echo "Данные введены неккоректно.Попробуйте снова";
         }
-
     }
-
-
 }
 
 
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -50,11 +43,12 @@ if(isset($_POST['register_name']) && isset($_POST['register_password'])){
     <title>Document</title>
 </head>
 <body>
-
-<form method="post">
-    <input type="text" name="register_name" placeholder="Логин" required>
-    <input type="password" name="register_password" placeholder="Пароль" required>
-    <input type="submit" name="send">
+<?php require_once 'title.php' ?>
+<h1 align="center">Регистрация:</h1>
+<form method="post" class="form-signin">
+    <input type="text" name="register_name" class="form-control" placeholder="Логин" required>
+    <input type="password" name="register_password" class="form-control" placeholder="Пароль" required>
+    <button type="submit" name="send" class="btn btn-default">Зарегистрироваться</button>
 </form>
 
 </body>
